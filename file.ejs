@@ -1,7 +1,7 @@
 <%  // this is a file full of interfaces, lets render each one %>
 
-<% schemas.forEach((schema) => { %>
-  <%- convertJsonSchemaToTypescript(schema) %>
-<% }) %>
+<% for ( let i=0; i < schemas.length; i++) { %>
+  <%- await convertJsonSchemaToTypescript(schemas[i]) %>
+<% } %>
 
 <% // code that uses the interfaces goes here %>

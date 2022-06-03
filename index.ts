@@ -10,8 +10,8 @@ const schemas = [
         type: "integer",
         format: "int64",
       },
-      modelName: "thingOne",
     },
+    modelName: "thingOne",
   },
   {
     type: "object",
@@ -24,9 +24,8 @@ const schemas = [
   },
 ];
 
-export async function convertJsonSchemaToTypescript(jsonSchema: any) {
-  const interfaceText = await compile(jsonSchema, jsonSchema.modelName, {});
-  return interfaceText;
+export function convertJsonSchemaToTypescript(jsonSchema: any) {
+  return compile(jsonSchema, jsonSchema.modelName, {});
 }
 
 function renderMyFile(fileIn: string, fileOut: string) {
@@ -36,12 +35,12 @@ function renderMyFile(fileIn: string, fileOut: string) {
       schemas,
       convertJsonSchemaToTypescript,
     },
-    {},
-    (err, renderedFileAsAString) => {
+    { async: true },
+    async (err, renderedFileAsAString) => {
       if (err) {
         throw err;
       }
-      writeFileSync(fileOut, renderedFileAsAString);
+      writeFileSync(fileOut, await renderedFileAsAString);
     }
   );
 }

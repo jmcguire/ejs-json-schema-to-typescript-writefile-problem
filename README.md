@@ -27,3 +27,7 @@ I want to see two interfaces.
 What I actually see is two promises.
 
 I don't know how to fix this.
+
+# Update
+
+It is now fixed!
