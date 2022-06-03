@@ -37,13 +37,13 @@ function renderMyFile(fileIn: string, fileOut: string) {
       convertJsonSchemaToTypescript,
     },
     {},
-    (err, renderedString) => {
+    (err, renderedFileAsAString) => {
       if (err) {
         throw err;
       }
-      writeFileSync(fileOut, renderedString);
+      writeFileSync(fileOut, renderedFileAsAString);
     }
   );
 }
 
-renderMyFile("file.ejs", "file.js");
+renderMyFile("file.ejs", "file.ts");
