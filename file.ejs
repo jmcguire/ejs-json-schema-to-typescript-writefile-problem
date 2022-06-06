@@ -1,7 +1,8 @@
 <%  // this is a file full of interfaces, lets render each one %>
 
-<% for ( let i=0; i < schemas.length; i++) { %>
-  <%- await convertJsonSchemaToTypescript(schemas[i]) %>
+<% values = Object.values(schemas) %>
+<% for ( let i=0; i < values.length; i++) { %>
+  <% include("interface.ejs", { schema: values[i] }) %>
 <% } %>
 
 <% // code that uses the interfaces goes here %>

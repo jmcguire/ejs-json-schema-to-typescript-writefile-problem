@@ -2,13 +2,13 @@ This is a repo to demonstrate a problem I'm having.
 
 # Problem Background
 
-I'm trying to get **writeFileSync**, **ejs**, and **json-schema-to-typescript** to work together, and I'm not good with Javascript async code.
+I'm trying to get **writeFileSync**, **renameSync**, **ejs**,**json-schema-to-typescript**, and **prettier** to work together, and I'm not good with Javascript async code.
 
 My goal is to generate Typescript code from a JSON Schema, and write it to a file.
 
 JSON Schema has ways to write files directly, but I'd _like_ to be able to create the Typescript code from within an EJS template, to give me flexibility to put more stuff in that file.
 
-Note: This is a _severly_ reduced version of a complicated piece of code I'm working on, but it does demonstrate the exact problem in two little files: `index.ts` and `file.ejs`.
+Note: This is a _severly_ reduced version of a complicated piece of code I'm working on, but it does demonstrate the exact problem in one typescript file and two EJS files: `index.ts`, `file.ejs`, and `interface.ejs`.
 
 # Requirements
 
@@ -30,4 +30,4 @@ I don't know how to fix this.
 
 # Update
 
-It is now fixed!
+I keep making the problem more complicated.
