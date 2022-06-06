@@ -1,8 +1,5 @@
-<%  // this is a file full of interfaces, lets render each one %>
-
-<% values = Object.values(schemas) %>
+// file.ejs: 
+<% const values = Object.values(schemas) %>
 <% for ( let i=0; i < values.length; i++) { %>
-  <% include("interface.ejs", { schema: values[i] }) %>
+  <%- await include("interface", { schema: values[i] }) %>
 <% } %>
-
-<% // code that uses the interfaces goes here %>
