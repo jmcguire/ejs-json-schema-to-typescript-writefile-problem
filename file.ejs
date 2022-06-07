@@ -1,5 +1,4 @@
 // file.ejs: 
-<% const values = Object.values(schemas) %>
-<% for ( let i=0; i < values.length; i++) { %>
-  <%- await include("interface", { schema: values[i] }) %>
+<% for ( let i=0; i < schemas.length; i++) { %>
+  <%- await include("interface", { schema: schemas[i] }) %>
 <% } %>

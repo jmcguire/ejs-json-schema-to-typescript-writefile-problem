@@ -22,9 +22,9 @@ Set it up with `./setup.sh`
 
 Run the code with `./go.sh`
 
-I want to see two interfaces.
+I want to see an interface, in the new file.ts.
 
-The renameSync line isn't working. When it's not there, the tempfile is produced and had the correct code. When the line is there, the program fails with a `Error: ENOENT: no such file or directory, rename './tempfile' -> './file.ts'` error.
+The renameSync line isn't working. When it's not there, the tempfile is produced and has the correct code. When the line is there, the program fails with a `Error: ENOENT: no such file or directory, rename './tempfile' -> './file.ts'` error.
 
 # Update
 
